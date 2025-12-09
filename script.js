@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const forms = authModal.querySelectorAll('form');
             forms.forEach(form => {
                 form.reset();
-                
+
                 const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="password"], input[type="tel"]');
                 inputs.forEach(input => {
                     input.value = '';
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         extraLoginTriggers.forEach(trigger => {
             trigger.addEventListener('click', openModal);
         });
-        
+
         closeModalBtn.addEventListener('click', closeModal);
         authModal.addEventListener('click', (e) => {
             if (e.target === authModal) closeModal();
@@ -172,12 +172,12 @@ document.addEventListener('DOMContentLoaded', () => {
             yearSelect.addEventListener('change', updateDays);
         };
         populateDateDropdowns();
-        
+
         const phoneInput = document.getElementById('modal-signup-phone');
-        if(phoneInput) {
+        if (phoneInput) {
             phoneInput.addEventListener('input', (e) => {
                 let cleaned = ('' + e.target.value).replace(/\D/g, '');
-                
+
                 if (cleaned.length > 10) {
                     cleaned = cleaned.substring(0, 10);
                 }
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (cleaned.length > 8) {
                     formatted += ' ' + cleaned.substring(8, 10);
                 }
-                
+
                 e.target.value = formatted;
             });
         }
@@ -282,4 +282,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         updateNav(currentSectionIndex);
     }
+
+
+    // FAQ Accordion Logic
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            const isActive = item.classList.contains('active');
+
+            // Close all other items
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('active');
+            });
+
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
 });
