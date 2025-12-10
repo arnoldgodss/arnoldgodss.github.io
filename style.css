@@ -53,6 +53,7 @@ a {
     z-index: 1000;
     color: var(--color-text-light);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
 }
 
 .header-container {
@@ -1047,4 +1048,723 @@ a {
 .faq-item.active .faq-answer {
     max-height: 200px;
     /* Approximate height for content */
+}
+
+/* ============================================
+   KAPSAMLI MOBİL UYUMLULUK KURALLARI
+   ============================================ */
+
+/* Hamburger Menü Butonu (varsayılan olarak gizli) */
+.hamburger-menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    color: var(--color-text-light);
+}
+
+.hamburger-menu .material-symbols-outlined {
+    font-size: 26px;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+.hamburger-menu.active .material-symbols-outlined {
+    transform: rotate(90deg);
+}
+
+/* Mobil navigasyon açıkken navbar arka planı */
+body.mobile-nav-open #main-header {
+    background-color: var(--color-text-dark) !important;
+}
+
+/* Tablet ve küçük ekranlar (850px ve altı) */
+@media (max-width: 850px) {
+    :root {
+        --header-height: 60px;
+    }
+
+    .header-container {
+        padding: 0 20px;
+    }
+
+    .logo a {
+        font-size: 18px;
+    }
+
+    /* Ana sayfa içerik ayarları */
+    .fullpage-section {
+        padding: 30px 20px 80px 20px;
+    }
+
+    #home-section .section-content h1 {
+        font-size: clamp(1.8rem, 5vw, 3rem);
+    }
+
+    #home-section .section-content p {
+        font-size: 16px;
+    }
+
+    /* Footer düzenlemesi */
+    #main-footer {
+        padding: 12px 0;
+    }
+
+    .footer-links a {
+        font-size: 11px;
+    }
+
+    .footer-copyright p {
+        font-size: 11px;
+    }
+
+    /* İçerik sayfaları */
+    .content-container {
+        padding: 40px 15px;
+    }
+
+    .content-container h1 {
+        font-size: 28px;
+    }
+
+    .content-container h2 {
+        font-size: 20px;
+    }
+
+    /* Orders sayfası */
+    .order-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .order-item {
+        flex-wrap: wrap;
+    }
+
+    .order-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .item-price {
+        width: 100%;
+        text-align: right;
+        margin-top: 5px;
+    }
+
+    /* FAQ */
+    .faq-question {
+        font-size: 14px;
+        padding: 15px 0;
+    }
+
+    .faq-answer p {
+        font-size: 13px;
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 300px;
+    }
+}
+
+/* Akıllı telefon (528px ve altı) */
+@media (max-width: 528px) {
+    :root {
+        --header-height: 55px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    /* Mobil navigasyon */
+    #main-header .main-nav {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: rgba(20, 20, 20, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0;
+        padding: 0;
+        overflow: hidden;
+        transition: height 0.3s ease, padding 0.3s ease;
+        box-sizing: border-box;
+    }
+
+    #main-header .main-nav.mobile-open {
+        height: calc(100vh - var(--header-height));
+        padding: 20px 0;
+    }
+
+    #main-header .main-nav a {
+        width: 100%;
+        text-align: center;
+        padding: 18px 20px;
+        font-size: 16px;
+        opacity: 1;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #main-header .main-nav a::after {
+        display: none;
+    }
+
+    .header-container {
+        padding: 0 15px;
+    }
+
+    .logo a {
+        font-size: 16px;
+    }
+
+    .side-nav {
+        gap: 4px;
+    }
+
+    .side-nav>.search-container,
+    .side-nav>a {
+        width: 36px;
+        height: 36px;
+    }
+
+    .side-nav .material-symbols-outlined {
+        font-size: 22px;
+    }
+
+    /* Ana sayfa */
+    .fullpage-section {
+        padding: 20px 15px 70px 15px;
+    }
+
+    #home-section .section-content h1 {
+        font-size: clamp(1.5rem, 6vw, 2.2rem);
+        margin-bottom: 12px;
+    }
+
+    #home-section .section-content p {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    /* Footer */
+    #main-footer {
+        padding: 10px 0;
+    }
+
+    .footer-container {
+        padding: 0 15px;
+    }
+
+    .footer-links {
+        gap: 10px 15px;
+    }
+
+    .footer-links a {
+        font-size: 10px;
+    }
+
+    .footer-copyright p {
+        font-size: 10px;
+    }
+
+    /* Arama overlay */
+    .search-overlay {
+        align-items: flex-start;
+    }
+
+    .search-modal {
+        padding: 15px;
+        padding-top: 15px;
+        max-width: 100%;
+    }
+
+    .search-header {
+        padding-bottom: 12px;
+    }
+
+    .search-input-wrapper .search-icon {
+        font-size: 18px;
+    }
+
+    #fullscreen-search-input {
+        font-size: 15px;
+        padding: 6px 0 6px 28px;
+    }
+
+    #fullscreen-search-input::placeholder {
+        font-size: 15px;
+    }
+
+    .cancel-btn {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    .popular-searches {
+        margin-top: 20px;
+    }
+
+    .popular-searches p {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .popular-searches ul {
+        gap: 8px;
+    }
+
+    .popular-searches a {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+
+    /* Modal */
+    .modal-overlay {
+        padding: 20px 15px;
+        align-items: center;
+    }
+
+    .modal-content {
+        margin: 0 auto;
+        max-width: 340px;
+        width: 100%;
+        max-height: calc(100vh - 40px);
+        overflow-y: auto;
+        border-radius: 12px;
+        padding: 22px 18px;
+    }
+
+    .close-modal-btn {
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .modal-content .input-group {
+        margin-bottom: 12px;
+    }
+
+    .modal-content .input-group label {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .modal-content .input-group input,
+    .modal-content .input-group select {
+        font-size: 16px;
+        /* iOS zoom'u önlemek için */
+        padding: 10px 12px;
+    }
+
+    .date-input-group {
+        gap: 6px;
+        flex-wrap: nowrap;
+    }
+
+    .date-input-group select {
+        font-size: 12px;
+        padding: 10px 24px 10px 8px;
+        background-position: right 6px center;
+        background-size: 10px;
+        text-align: left;
+        min-width: 0;
+    }
+
+    .date-input-group select:first-child {
+        flex: 0 0 60px;
+    }
+
+    .date-input-group select:nth-child(2) {
+        flex: 1 1 auto;
+    }
+
+    .date-input-group select:last-child {
+        flex: 0 0 70px;
+    }
+
+    .options-row {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        margin-bottom: 18px;
+    }
+
+    .checkbox-label {
+        font-size: 13px;
+    }
+
+    .auth-btn {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .auth-btn .material-symbols-outlined {
+        font-size: 18px;
+    }
+
+    .form-switch-text {
+        font-size: 12px;
+        margin-top: 18px;
+    }
+
+    .modal-consent-group {
+        margin-bottom: 18px;
+    }
+
+    .modal-consent-group label {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .password-wrapper .password-toggle-btn {
+        font-size: 11px;
+        right: 8px;
+    }
+
+    /* İçerik sayfaları */
+    .content-container {
+        padding: 30px 15px;
+    }
+
+    .content-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .content-container h2 {
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .content-container p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* İletişim sayfası */
+    .contact-info h3,
+    .contact-form-container h3 {
+        font-size: 18px;
+    }
+
+    .contact-info p {
+        font-size: 13px;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 16px;
+    }
+
+    /* Tracking formu */
+    .tracking-form-container {
+        padding: 20px;
+    }
+
+    .tracking-form-container input {
+        font-size: 16px;
+    }
+
+    /* Orders sayfası */
+    .order-header {
+        padding: 12px 15px;
+    }
+
+    .order-date {
+        font-size: 12px;
+    }
+
+    .order-id {
+        font-size: 13px;
+    }
+
+    .order-status {
+        font-size: 11px;
+    }
+
+    .order-items {
+        padding: 15px;
+    }
+
+    .order-item img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .item-name {
+        font-size: 13px;
+    }
+
+    .item-meta {
+        font-size: 11px;
+    }
+
+    .item-price {
+        font-size: 13px;
+    }
+
+    .order-footer {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .order-total {
+        font-size: 13px;
+    }
+
+    .order-details-link {
+        font-size: 12px;
+    }
+
+    /* FAQ */
+    .faq-section {
+        margin-top: 40px;
+        padding-top: 30px;
+    }
+
+    .faq-section h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .faq-question {
+        font-size: 13px;
+        padding: 12px 0;
+    }
+
+    .faq-answer p {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 400px;
+    }
+
+    /* Şifre görünürlük butonu */
+    .password-toggle-btn {
+        font-size: 12px;
+    }
+}
+
+/* Çok küçük ekranlar (375px ve altı - iPhone SE vb.) */
+@media (max-width: 375px) {
+    :root {
+        --header-height: 50px;
+    }
+
+    .hamburger-menu {
+        width: 24px;
+        height: 20px;
+    }
+
+    .hamburger-menu span {
+        height: 2px;
+    }
+
+    .logo a {
+        font-size: 14px;
+    }
+
+    .side-nav>.search-container,
+    .side-nav>a {
+        width: 32px;
+        height: 32px;
+    }
+
+    .side-nav .material-symbols-outlined {
+        font-size: 20px;
+    }
+
+    #home-section .section-content h1 {
+        font-size: 1.3rem;
+    }
+
+    #home-section .section-content p {
+        font-size: 13px;
+    }
+
+    .content-container h1 {
+        font-size: 20px;
+    }
+
+    .content-container h2 {
+        font-size: 16px;
+    }
+
+    .modal-content {
+        padding: 16px 12px;
+    }
+
+    .modal-content h2 {
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+
+    .modal-content .input-group {
+        margin-bottom: 10px;
+    }
+
+    .modal-content .input-group label {
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+
+    .modal-content .input-group input,
+    .modal-content .input-group select {
+        padding: 9px 10px;
+        font-size: 15px;
+    }
+
+    .date-input-group select {
+        font-size: 11px;
+        padding: 9px 20px 9px 6px;
+        background-position: right 4px center;
+        background-size: 9px;
+    }
+
+    .options-row {
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+
+    .checkbox-label {
+        font-size: 12px;
+    }
+
+    .auth-btn {
+        padding: 11px;
+        font-size: 13px;
+    }
+
+    .form-switch-text {
+        font-size: 11px;
+        margin-top: 14px;
+    }
+
+    .modal-consent-group {
+        margin-bottom: 14px;
+    }
+
+    .modal-consent-group label {
+        font-size: 10px;
+    }
+
+    .close-modal-btn {
+        font-size: 22px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .faq-question {
+        font-size: 12px;
+    }
+
+    .faq-answer p {
+        font-size: 11px;
+    }
+}
+
+/* Yatay mod (landscape) için düzeltmeler */
+@media (max-height: 500px) and (orientation: landscape) {
+    :root {
+        --header-height: 50px;
+    }
+
+    .fullpage-section {
+        padding: 15px 30px 60px 30px;
+    }
+
+    #home-section .section-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content {
+        max-height: 90vh;
+    }
+
+    #main-header .main-nav.mobile-open {
+        height: auto;
+        max-height: calc(100vh - var(--header-height));
+        overflow-y: auto;
+    }
+
+    #main-header .main-nav a {
+        padding: 12px 20px;
+    }
+}
+
+/* Touch cihazlar için hover efektlerini kaldır */
+@media (hover: none) and (pointer: coarse) {
+    .main-nav a:hover::after {
+        width: 0;
+    }
+
+    .footer-links a:hover {
+        opacity: 0.7;
+    }
+
+    .auth-btn:hover {
+        opacity: 1;
+    }
+
+    .discover-button:hover {
+        opacity: 1;
+    }
+
+    /* Touch için aktif durumlar */
+    .main-nav a:active {
+        opacity: 0.8;
+    }
+
+    .auth-btn:active {
+        opacity: 0.8;
+        transform: scale(0.98);
+    }
+
+    .discover-button:active {
+        opacity: 0.8;
+        transform: scale(0.98);
+    }
+
+    .faq-question:active {
+        color: #555;
+    }
+}
+
+/* iOS güvenli alan desteği (notch vb.) */
+@supports (padding: max(0px)) {
+    .header-container {
+        padding-left: max(15px, env(safe-area-inset-left));
+        padding-right: max(15px, env(safe-area-inset-right));
+    }
+
+    #main-footer {
+        padding-bottom: max(10px, env(safe-area-inset-bottom));
+    }
+
+    .fullpage-section {
+        padding-bottom: max(70px, calc(70px + env(safe-area-inset-bottom)));
+    }
 }

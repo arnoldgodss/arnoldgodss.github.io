@@ -2,9 +2,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const body = document.body;
 
+    // ============================================
+    // HAMBURGER MENÜ (Mobil Navigasyon)
+    // ============================================
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (hamburgerMenu && mainNav) {
+        const menuIcon = hamburgerMenu.querySelector('.material-symbols-outlined');
+
+        const toggleMenu = (open) => {
+            if (open) {
+                hamburgerMenu.classList.add('active');
+                mainNav.classList.add('mobile-open');
+                body.classList.add('mobile-nav-open');
+                if (menuIcon) menuIcon.textContent = 'close';
+            } else {
+                hamburgerMenu.classList.remove('active');
+                mainNav.classList.remove('mobile-open');
+                if (menuIcon) menuIcon.textContent = 'menu';
+
+                // Animasyon bitene kadar bekle, sonra navbar'ı normale döndür
+                setTimeout(() => {
+                    // Sadece menü hala kapalıysa class'ı kaldır
+                    if (!mainNav.classList.contains('mobile-open')) {
+                        body.classList.remove('mobile-nav-open');
+                    }
+                }, 350);
+            }
+        };
+
+        hamburgerMenu.addEventListener('click', () => {
+            const isOpen = hamburgerMenu.classList.contains('active');
+            toggleMenu(!isOpen);
+        });
+
+        // Menü linkine tıklanınca menüyü kapat
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 528) {
+                    toggleMenu(false);
+                }
+            });
+        });
+
+        // Ekran boyutu değişince menüyü sıfırla
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 528) {
+                toggleMenu(false);
+            }
+        });
+    }
+
     const isOverlayOpen = () => {
         return body.classList.contains('search-overlay-is-open') ||
-            body.classList.contains('modal-is-open');
+            body.classList.contains('modal-is-open') ||
+            body.classList.contains('mobile-nav-open');
     };
 
     const searchTrigger = document.getElementById('search-trigger');
