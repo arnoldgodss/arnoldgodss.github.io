@@ -20,15 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 hamburgerMenu.classList.remove('active');
                 mainNav.classList.remove('mobile-open');
+                body.classList.remove('mobile-nav-open');
                 if (menuIcon) menuIcon.textContent = 'menu';
-
-                // Animasyon bitene kadar bekle, sonra navbar'ı normale döndür
-                setTimeout(() => {
-                    // Sadece menü hala kapalıysa class'ı kaldır
-                    if (!mainNav.classList.contains('mobile-open')) {
-                        body.classList.remove('mobile-nav-open');
-                    }
-                }, 350);
             }
         };
 

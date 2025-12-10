@@ -53,7 +53,7 @@ a {
     z-index: 1000;
     color: var(--color-text-light);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-container {
@@ -1072,7 +1072,7 @@ a {
 .hamburger-menu .material-symbols-outlined {
     font-size: 26px;
     font-weight: 300;
-    transition: transform 0.3s ease;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hamburger-menu.active .material-symbols-outlined {
@@ -1200,13 +1200,13 @@ body.mobile-nav-open #main-header {
         gap: 0;
         padding: 0;
         overflow: hidden;
-        transition: height 0.3s ease, padding 0.3s ease;
+        transition: height 0.25s cubic-bezier(0.4, 0, 0.2, 1), padding 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         box-sizing: border-box;
     }
 
     #main-header .main-nav.mobile-open {
         height: calc(100vh - var(--header-height));
-        padding: 20px 0;
+        padding: 0;
     }
 
     #main-header .main-nav a {
@@ -1216,6 +1216,10 @@ body.mobile-nav-open #main-header {
         font-size: 16px;
         opacity: 1;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #main-header .main-nav a:first-child {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     #main-header .main-nav a::after {
