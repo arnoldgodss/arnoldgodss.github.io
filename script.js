@@ -40,11 +40,22 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Ekran boyutu değişince menüyü sıfırla
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 528) {
+        // Menünün boş alanına tıklanınca kapat (sadece nav'a tıklanırsa, linklere değil)
+        mainNav.addEventListener('click', (e) => {
+            if (e.target === mainNav && window.innerWidth <= 528) {
                 toggleMenu(false);
             }
+        });
+
+        // Ekran boyutu değişince menüyü sıfırla (debounce ile optimize edildi)
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                if (window.innerWidth > 528) {
+                    toggleMenu(false);
+                }
+            }, 100);
         });
     }
 
@@ -162,6 +173,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+
+        // Password overlay click handler - focus input when overlay clicked
+        const passwordOverlay = document.querySelector('.password-overlay');
+        const loginPasswordInput = document.getElementById('modal-login-password');
+        if (passwordOverlay && loginPasswordInput) {
+            passwordOverlay.addEventListener('click', function () {
+                loginPasswordInput.focus();
+                // Move cursor to end
+                const len = loginPasswordInput.value.length;
+                loginPasswordInput.setSelectionRange(len, len);
+            });
+        }
+
 
         const daySelect = document.getElementById('modal-signup-day');
         const monthSelect = document.getElementById('modal-signup-month');
@@ -303,18 +327,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 goToSection(targetIndex);
             });
         });
+
+        // Wheel event - throttle ile optimize edildi
+        let wheelThrottle = false;
         document.addEventListener('wheel', event => {
-            if (isScrolling || isOverlayOpen()) return;
+            if (isScrolling || isOverlayOpen() || wheelThrottle) return;
+            wheelThrottle = true;
+
             const scrollDirection = event.deltaY > 0 ? 1 : -1;
             const newIndex = currentSectionIndex + scrollDirection;
             if (newIndex >= 0 && newIndex < totalSections) {
                 goToSection(newIndex);
             }
-        });
+
+            setTimeout(() => { wheelThrottle = false; }, 100);
+        }, { passive: true });
+
+        // Touch events - passive listeners ile optimize edildi
         let touchstartY = 0;
         document.addEventListener('touchstart', event => {
             touchstartY = event.touches[0].clientY;
-        });
+        }, { passive: true });
+
         document.addEventListener('touchend', event => {
             if (isScrolling || isOverlayOpen()) return;
             let touchendY = event.changedTouches[0].clientY;
@@ -326,7 +360,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     goToSection(newIndex);
                 }
             }
-        });
+        }, { passive: true });
+
         updateNav(currentSectionIndex);
     }
 

@@ -54,6 +54,8 @@ a {
     color: var(--color-text-light);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
     transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: background-color;
+    transform: translateZ(0);
 }
 
 .header-container {
@@ -160,6 +162,10 @@ a {
 .scroll-container {
     height: 100%;
     transition: transform var(--transition-speed) cubic-bezier(0.645, 0.045, 0.355, 1);
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .fullpage-section {
@@ -174,6 +180,10 @@ a {
     background-size: cover;
     background-position: center;
     padding: 50px 50px 96px 50px;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    contain: layout paint;
 }
 
 
@@ -234,10 +244,11 @@ a {
     width: 100%;
     z-index: 1000;
     padding: 14px 0;
-    background-color: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-top: 1px solid rgba(255, 255, 255, 0.15);
+    transform: translateZ(0);
 }
 
 .footer-container {
@@ -574,6 +585,26 @@ a {
     font-weight: 500;
 }
 
+/* Password field - no text selection */
+.password-input-container {
+    position: relative;
+    flex: 1;
+}
+
+.password-input-container input {
+    width: 100%;
+}
+
+.password-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: text;
+    z-index: 1;
+}
+
 .auth-btn {
     width: 100%;
     padding: 14px;
@@ -621,6 +652,41 @@ a {
     color: #555;
     line-height: 1.5;
     cursor: pointer;
+}
+
+/* Telefon input wrapper */
+.phone-input-wrapper {
+    display: flex;
+    gap: 8px;
+}
+
+.phone-input-wrapper .country-code-select {
+    flex: 0 0 110px;
+    padding: 12px 30px 12px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: var(--font-main);
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23888888' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 12px;
+    cursor: pointer;
+}
+
+.phone-input-wrapper .country-code-select:focus {
+    border-color: var(--color-text-dark);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.phone-input-wrapper input[type="tel"] {
+    flex: 1;
 }
 
 .date-input-group {
@@ -1191,17 +1257,20 @@ body.mobile-nav-open #main-header {
         left: 0;
         width: 100%;
         height: 0;
-        background-color: rgba(20, 20, 20, 0.85);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        background-color: rgba(20, 20, 20, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         gap: 0;
         padding: 0;
         overflow: hidden;
-        transition: height 0.25s cubic-bezier(0.4, 0, 0.2, 1), padding 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         box-sizing: border-box;
+        will-change: height;
+        transform: translateZ(0);
+        contain: layout style;
     }
 
     #main-header .main-nav.mobile-open {
@@ -1379,21 +1448,22 @@ body.mobile-nav-open #main-header {
     }
 
     .date-input-group {
-        gap: 6px;
+        gap: 8px;
         flex-wrap: nowrap;
     }
 
     .date-input-group select {
-        font-size: 12px;
-        padding: 10px 24px 10px 8px;
-        background-position: right 6px center;
-        background-size: 10px;
+        font-size: 13px;
+        padding: 10px 32px 10px 8px;
+        background-position: right 10px center;
+        background-size: 12px;
         text-align: left;
         min-width: 0;
+        text-overflow: ellipsis;
     }
 
     .date-input-group select:first-child {
-        flex: 0 0 60px;
+        flex: 0 0 78px;
     }
 
     .date-input-group select:nth-child(2) {
@@ -1401,7 +1471,7 @@ body.mobile-nav-open #main-header {
     }
 
     .date-input-group select:last-child {
-        flex: 0 0 70px;
+        flex: 0 0 80px;
     }
 
     .options-row {
@@ -1642,10 +1712,14 @@ body.mobile-nav-open #main-header {
     }
 
     .date-input-group select {
-        font-size: 11px;
-        padding: 9px 20px 9px 6px;
-        background-position: right 4px center;
-        background-size: 9px;
+        font-size: 12px;
+        padding: 9px 28px 9px 6px;
+        background-position: right 8px center;
+        background-size: 10px;
+    }
+
+    .date-input-group select:first-child {
+        min-width: 72px;
     }
 
     .options-row {
