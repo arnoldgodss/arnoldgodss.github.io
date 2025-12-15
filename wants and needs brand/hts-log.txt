@@ -1,0 +1,45 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sun, 14 Dec 2025 04:29:48 at https://wantsandneeds.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://wantsandneeds.com/ -O1 "C:\My Web Sites\wants and needs brand" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+04:30:02	Warning: 	file not stored in cache due to bogus state (incomplete type with OK (200), size 0): https://shop.app/checkouts/internal/preloads.js?locale=en-TR&shop_id=66284388503
+04:31:44	Error: 	"Not Found" (404) at link https://wantsandneeds.com/modules/v2/chunk.common_FunKbpTJ.esm.js (from https://wantsandneeds.com/)
+04:31:44	Error: 	"Not Found" (404) at link https://wantsandneeds.com/modules/v2/client.shop-login-button_C3-NmE42.en.esm.js (from https://wantsandneeds.com/)
+04:31:44	Error: 	"Not Found" (404) at link https://wantsandneeds.com/window.location (from https://wantsandneeds.com/)
+04:31:44	Error: 	"Not Found" (404) at link https://wantsandneeds.com/POST (from https://wantsandneeds.com/)
+04:31:44	Error: 	"Error when decompressing" (-1) at link https://wantsandneeds.com/cdn (from https://wantsandneeds.com/)
+04:34:05	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/modules/v2/chunk.common_FunKbpTJ.esm.js (from https://wantsandneeds.com/collections/all)
+04:34:05	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/modules/v2/client.shop-login-button_C3-NmE42.en.esm.js (from https://wantsandneeds.com/collections/all)
+04:34:05	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/window.location (from https://wantsandneeds.com/collections/all)
+04:34:05	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/POST (from https://wantsandneeds.com/collections/all)
+04:34:08	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/primary-products/products/modules/v2/chunk.common_FunKbpTJ.esm.js (from https://wantsandneeds.com/collections/primary-products/products/wants-and-needs-hoodie)
+04:34:08	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/primary-products/products/modules/v2/client.shop-login-button_C3-NmE42.en.esm.js (from https://wantsandneeds.com/collections/primary-products/products/wants-and-needs-hoodie)
+04:34:08	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/primary-products/products/window.location (from https://wantsandneeds.com/collections/primary-products/products/wants-and-needs-hoodie)
+04:34:08	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/primary-products/products/POST (from https://wantsandneeds.com/collections/primary-products/products/wants-and-needs-hoodie)
+04:34:11	Error: 	"Not Found" (404) at link https://wantsandneeds.com/products/modules/v2/chunk.common_FunKbpTJ.esm.js (from https://wantsandneeds.com/products/wants-and-needs-hoodie)
+04:34:11	Error: 	"Not Found" (404) at link https://wantsandneeds.com/products/modules/v2/client.shop-login-button_C3-NmE42.en.esm.js (from https://wantsandneeds.com/products/wants-and-needs-hoodie)
+04:34:11	Error: 	"Not Found" (404) at link https://wantsandneeds.com/products/window.location (from https://wantsandneeds.com/products/wants-and-needs-hoodie)
+04:34:11	Error: 	"Not Found" (404) at link https://wantsandneeds.com/products/POST (from https://wantsandneeds.com/products/wants-and-needs-hoodie)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/policies/modules/v2/chunk.common_FunKbpTJ.esm.js (from https://wantsandneeds.com/policies/refund-policy)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/policies/modules/v2/client.shop-login-button_C3-NmE42.en.esm.js (from https://wantsandneeds.com/policies/refund-policy)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/policies/window.location (from https://wantsandneeds.com/policies/refund-policy)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/policies/POST (from https://wantsandneeds.com/policies/refund-policy)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/hoodies/products/modules/v2/chunk.common_FunKbpTJ.esm.js (from https://wantsandneeds.com/collections/hoodies/products/wants-and-needs-hoodie)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/hoodies/products/modules/v2/client.shop-login-button_C3-NmE42.en.esm.js (from https://wantsandneeds.com/collections/hoodies/products/wants-and-needs-hoodie)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/hoodies/products/window.location (from https://wantsandneeds.com/collections/hoodies/products/wants-and-needs-hoodie)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/hoodies/products/POST (from https://wantsandneeds.com/collections/hoodies/products/wants-and-needs-hoodie)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/sweats/products/modules/v2/chunk.common_FunKbpTJ.esm.js (from https://wantsandneeds.com/collections/sweats/products/wants-and-needs-flared-sweatpants)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/sweats/products/modules/v2/client.shop-login-button_C3-NmE42.en.esm.js (from https://wantsandneeds.com/collections/sweats/products/wants-and-needs-flared-sweatpants)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/sweats/products/window.location (from https://wantsandneeds.com/collections/sweats/products/wants-and-needs-flared-sweatpants)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/collections/sweats/products/POST (from https://wantsandneeds.com/collections/sweats/products/wants-and-needs-flared-sweatpants)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/pages/modules/v2/chunk.common_FunKbpTJ.esm.js (from https://wantsandneeds.com/pages/size-guide)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/pages/modules/v2/client.shop-login-button_C3-NmE42.en.esm.js (from https://wantsandneeds.com/pages/size-guide)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/pages/window.location (from https://wantsandneeds.com/pages/size-guide)
+04:34:12	Error: 	"Not Found" (404) at link https://wantsandneeds.com/pages/POST (from https://wantsandneeds.com/pages/size-guide)
+
+HTTrack Website Copier/3.49-2 mirror complete in 4 minutes 24 seconds : 244 links scanned, 210 files written (160503268 bytes overall) [154932321 bytes received at 586864 bytes/sec], 9340703 bytes transferred using HTTP compression in 112 files, ratio 21%, 16.8 requests per connection
+(33 errors, 1 warnings, 0 messages)

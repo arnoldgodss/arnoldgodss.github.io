@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://wantsandneeds.com/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://wantsandneeds.com/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://wantsandneeds.com/collections/sweats.atom"/>
+  <title>Wants and Needs</title>
+  <updated>2025-05-12T19:18:54-04:00</updated>
+  <author>
+    <name>Wants and Needs</name>
+  </author>
+  <entry>
+    <id>https://wantsandneeds.com/products/8992577061015</id>
+    <published>2025-05-12T19:18:54-04:00</published>
+    <updated>2025-05-12T19:18:54-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://wantsandneeds.com/products/grout-sweatpants"/>
+    <title>Gray Baggy Sweatpants</title>
+    <s:type>Sweatpants</s:type>
+    <s:vendor>Wants and Needs</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0662/8438/8503/files/Front_GS.png?v=1762995422"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Wants and Needs<br>
+        <strong>Type: </strong>Sweatpants<br>
+        <strong>Price: </strong>
+            69.99
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><ul>
+<li>100% Heavy-Weight Cotton (11.8oz or 400GSM).</li>
+<li>Embroidered Logos.</li>
+<li>Monochrome Multi Panel Design.<br>
+</li>
+<li>Relaxed Baggy Fit with Wide-Leg Style.</li>
+<li>Back pockets.</li>
+<li>Straight legged. </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>flared sweatpants</s:tag>
+    <s:tag>packn</s:tag>
+    <s:tag>sweatpants</s:tag>
+    <s:tag>wide leg</s:tag>
+    <s:tag>wide leg sweatpants</s:tag>
+    <s:variant>
+      <id>https://wantsandneeds.com/products/8992577061015</id>
+      <title>S</title>
+      <s:price currency="USD">69.99</s:price>
+      <s:sku>WAN-BAGGY-SWEATS-GRY-S</s:sku>
+      <s:grams>641</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://wantsandneeds.com/products/8992577061015</id>
+      <title>M</title>
+      <s:price currency="USD">69.99</s:price>
+      <s:sku>WAN-BAGGY-SWEATS-GRY-M</s:sku>
+      <s:grams>683</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://wantsandneeds.com/products/8992577061015</id>
+      <title>L</title>
+      <s:price currency="USD">69.99</s:price>
+      <s:sku>WAN-BAGGY-SWEATS-GRY-L</s:sku>
+      <s:grams>695</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://wantsandneeds.com/products/8992577061015</id>
+      <title>XL</title>
+      <s:price currency="USD">69.99</s:price>
+      <s:sku>WAN-BAGGY-SWEATS-GRY-XL</s:sku>
+      <s:grams>734</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://wantsandneeds.com/products/8600702484631</id>
+    <published>2024-10-26T18:19:51-04:00</published>
+    <updated>2024-10-26T18:19:51-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://wantsandneeds.com/products/wants-and-needs-flared-sweatpants"/>
+    <title>Black Baggy Sweatpants</title>
+    <s:type>Sweatpants</s:type>
+    <s:vendor>Wants and Needs</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0662/8438/8503/files/FrontBS.png?v=1762995836"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Wants and Needs<br>
+        <strong>Type: </strong>Sweatpants<br>
+        <strong>Price: </strong>
+            69.99
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><ul>
+<li>100% Heavy-Weight Cotton (11.8oz or 400GSM).</li>
+<li>Embroidered Logos.</li>
+<li>Monochrome Multi Panel Design.<br>
+</li>
+<li>Relaxed Baggy Fit with Wide-Leg Style.</li>
+<li>Back pockets.</li>
+<li>Straight legged.<br>
+</li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>flared sweatpants</s:tag>
+    <s:tag>packn</s:tag>
+    <s:tag>sweatpants</s:tag>
+    <s:tag>wide leg</s:tag>
+    <s:tag>wide leg sweatpants</s:tag>
+    <s:variant>
+      <id>https://wantsandneeds.com/products/8600702484631</id>
+      <title>S</title>
+      <s:price currency="USD">69.99</s:price>
+      <s:sku>WAN-BAGGY-SWEATS-BLK-S</s:sku>
+      <s:grams>641</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://wantsandneeds.com/products/8600702484631</id>
+      <title>M</title>
+      <s:price currency="USD">69.99</s:price>
+      <s:sku>WAN-BAGGY-SWEATS-BLK-M</s:sku>
+      <s:grams>683</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://wantsandneeds.com/products/8600702484631</id>
+      <title>L</title>
+      <s:price currency="USD">69.99</s:price>
+      <s:sku>WAN-BAGGY-SWEATS-BLK-L</s:sku>
+      <s:grams>695</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://wantsandneeds.com/products/8600702484631</id>
+      <title>XL</title>
+      <s:price currency="USD">69.99</s:price>
+      <s:sku>WAN-BAGGY-SWEATS-BLK-XL</s:sku>
+      <s:grams>734</s:grams>
+    </s:variant>
+  </entry>
+</feed>

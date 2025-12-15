@@ -1,0 +1,11 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+wantsandneeds.com	TRUE	/	FALSE	1999999999	_shopify_essential	:AZsaemTMAAEA5qvlowsaKcLBQmDTCoEEcuclQsWIuRmm3oJHmqjlu1v_WUVDzseJ1wBK3dQBnKYORkCPydpKHdykDbBh45sJqrzZFPn815VhO9YxCnIXwiZbC3ZgS9NXJBSEavtGkC5WQiZvLiWDLxAzxsGXjKVOSPmA8NXZpu-JGQaKq4DWn1s3T3K81WQ4B51dyDJoo0ObbcbbGxoSKMRgOQZ-ardPOS_udJXhO3vOL_wEOiwfPdsTt4tHI-ZdQQ6DzV965ZJz0Z1dH80dX0Q4jkccKGtnHTiQjZW3cQ6cMNuLsnvKUeRZqw9ChfL-PjNeqokiRJxKcA:
+wantsandneeds.com	TRUE	/	FALSE	1999999999	_shopify_analytics	:AZsaemTnAAEApmHa9OvfEgNpKc02K9B48aJftda0VSWdWNcVOpsvH87OU1skKkqeP733lnk:
+wantsandneeds.com	TRUE	/	FALSE	1999999999	Priority	High
+wantsandneeds.com	TRUE	/	FALSE	1999999999	localization	TR
+wantsandneeds.com	TRUE	/	FALSE	1999999999	cart_currency	USD
+wantsandneeds.com	TRUE	/	FALSE	1999999999	_shopify_y	e3106aac-94dd-4085-9aa4-4e8b0c6c5c96
+wantsandneeds.com	TRUE	/	FALSE	1999999999	_shopify_s	8240ca0f-335f-4713-a747-14a2531fcd22
+wantsandneeds.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+
